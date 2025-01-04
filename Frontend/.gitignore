@@ -23,5 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-Frontend/node_modules
-Backend/node_modules

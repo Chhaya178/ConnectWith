@@ -15,9 +15,10 @@ import { io } from "socket.io-client";
 import { Badge } from "@mui/material";
 import CallEndIcon from '@mui/icons-material/CallEnd';
 import { useNavigate } from 'react-router-dom'
+import server from "../environment";
 
 
-const server_url = "http://localhost:8080";
+const server_url = server;
 
 var connections = {}
 

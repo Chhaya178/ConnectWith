@@ -136,6 +136,12 @@
 
   }
 
+  .landingPageContainer .navHeader {
+    align-items: center;
+    display: flex;
+    padding-right: 5px;
+}
+
 
   .landingPageContainer nav h2 {
 

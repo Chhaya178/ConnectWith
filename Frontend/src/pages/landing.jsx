@@ -1,6 +1,7 @@
 import React from 'react'
 import "../App.css";
 import { Link, useNavigate } from 'react-router-dom';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export default function LandingPage() {
 
@@ -23,7 +24,7 @@ export default function LandingPage() {
           }}>Register</p>
 
           <div role='button'>
-            <p onClick={() => {
+            <p style={{fontSize:"0.8rem"}} onClick={() => {
               router("/auth")
             }}>Login</p>
           </div>
@@ -32,7 +33,7 @@ export default function LandingPage() {
 
       <div className="landingMainContainer">
         <div>
-          <h1><span style={{color:"#FF9839"}}>Connect</span> with your loved Ones</h1>
+          <h1><span style={{color:"#FF9839"}}>Connect</span> with your loved Ones</h1> 
 
           <p>Cover a distance with connectWith</p>
           <div role='button'>

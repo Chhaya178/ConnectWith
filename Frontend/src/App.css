@@ -139,7 +139,7 @@
   .landingPageContainer .navHeader {
     align-items: center;
     display: flex;
-    padding-right: 8px;
+    padding-right: 10px;
 }
 
 
@@ -164,7 +164,7 @@
 }
 
 .landingMainContainer > div:nth-child(1) {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     margin-top: 1rem;
    
 }

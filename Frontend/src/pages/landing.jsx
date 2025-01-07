@@ -13,7 +13,7 @@ export default function LandingPage() {
         <div className='navHeader'>
         <img src="video-call.png" alt="" />
           <h2>ConnectWith</h2>
-        </div>
+        </div> <br />
         <div className='navList'>
           <p onClick={() => {
             router("sdfdwe232")

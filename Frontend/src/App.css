@@ -35,6 +35,10 @@
     cursor: pointer;
 }
 
+.landingPageContainer nav .mobileNavlist {
+    display: none;
+}
+
 .landingMainContainer {
     display: flex;
     justify-content: space-between;
@@ -86,6 +90,7 @@
     width: 3rem;
 }
 
+
 .meetContainer {
     display: flex;
     padding-inline: 20px;
@@ -98,6 +103,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    margin-left: 250px;
 }
 
 .rightPanel {
@@ -145,7 +151,7 @@
 
   .landingPageContainer nav h2 {
 
-    font-size: 1.2rem !important;
+    font-size: 1.2rem;
   }
 
   .landingPageContainer .navHeader > img {
@@ -154,17 +160,31 @@
 
 .landingPageContainer nav .navList{
     margin-top: 0.5rem;
-    display: flex;
-    gap: 0.8rem;
+    display: none;
+   
+}
+
+.landingPageContainer nav .mobileNavlist {
+    display: block;
+    cursor: pointer;
+   
+}
+
+
+.menuItem {
+    background-color: rgba(0, 0, 0, 0.63);
+    color: white;
     cursor: pointer;
 }
 
-.landingPageContainer nav .navList > p {
-    font-size: 0.8rem !important; 
+.css-1toxriw-MuiList-root-MuiMenu-list{
+    background-color:  rgba(0, 0, 0, 0.927);
 }
 
+
+
 .landingMainContainer > div:nth-child(1) {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     margin-top: 1rem;
    
 }
@@ -188,4 +208,44 @@
     color: white;
     font-size: 1rem;
 }
+
+.boxGrid {
+    width: 100vw !important;
+    height: auto !important;
+}
+
+.logo > img {
+    width: 2rem;
+}
+
+.navBar .logo h2 {
+    font-size: 1.2rem;
+}
+
+.history {
+    font-size: 0.8rem !important;
+}
+
+.LogoutBtn {
+    font-size: 0.8rem !important;
+}
+
+.leftPanel {
+    margin-left: 5%;
+}
+
+.leftPanel div h2 {
+    font-size: 0.9rem;
+}
+
+
+.meetingCode {
+    width: 40vw !important;
+}
+
+.rightPanel > img {
+    width: 25vw;
+    height: 20vh;
+}
+
 }

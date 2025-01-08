@@ -23,9 +23,9 @@ const defaultTheme = createTheme();
 
 export default function Authentication() {
 
-    const [username, setUsername] = React.useState();
-    const [password, setPassword] = React.useState();
-    const [name, setName] = React.useState();
+    const [username, setUsername] = React.useState("");
+    const [password, setPassword] = React.useState("");
+    const [name, setName] = React.useState("");
     const [error, setError] = React.useState();
     const [message, setMessage] = React.useState();
 
@@ -68,8 +68,8 @@ export default function Authentication() {
       <Grid  className='signUpGrid'container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
        
-        <Grid   size={{ xs: 6, md: 4 }} component={Paper} elevation={6} square>
-          <Box
+        <Grid  className='boxGrid' size={{ xs: 6, md: 4 }} component={Paper} elevation={6} square>
+          <Box 
             sx={{
               my: 8,
               mx: 4,

@@ -18,6 +18,11 @@
     transform: scaleX(-1);
 }
 
+.username {
+    width: 30vw !important;
+    padding: 10px !important;
+    margin: 10px !important;
+}
 
 
 
@@ -104,6 +109,76 @@
     align-items: center;
     
 }
+
+.sendIcon {
+    display: inline !important;
+    background-color: #1976D2 !important;
+    color: white;
+    padding: 10px;
+    font-size: 3rem !important;
+    width: 7vw !important;
+    border-radius: 10px;
+}
+
+
+@media (min-width:350px) and (max-width:800px) {
+
+    .textBox {
+        margin-left: 5%;
+    }
+
+    .username {
+        width: 50vw !important;
+    }
+
+    .textBox Button {
+        width: 30vw !important;
+        height: 7vh !important;
+    }
+
+    .localVideo > video {
+        width: 90vw;
+        margin-left: 20px;
+    }
+    .buttonContainers {
+        background-color: black;  
+    }
+
+    .buttonContainers svg {
+        font-size: 1.5rem;
+     }
+
+     .chatRoom {
+        height: 90vh;
+        padding-inline: 5px;
+     }
+
+     .sendIcon {
+        border-radius: 10px !important;
+        padding: 10px;
+        font-size: 2rem !important;
+        right: 0 !important;
+     }
+
+    .chat {
+        width: 15vw !important;
+        bottom: 5px !important;
+    }
+
+    .conferenceView {
+        width: 60vw;
+        padding: 10px;
+        width: 70vh;
+    }
+
+    .newVideo {
+        height: auto;
+        width:65vw;
+    }
+
+}
+
+
 
 
 

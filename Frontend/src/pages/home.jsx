@@ -32,13 +32,13 @@ import { AuthContext } from '../contexts/AuthContext';
         </div>
 
         <div style={{display:"flex", alignItems:"center"}}>
-            <IconButton style={{color:"black"}} onClick={() => {
+            <IconButton  className="history" style={{color:"black"}} onClick={() => {
               navigate('/history')
             }}>
                 <RestoreIcon/> 
                 <p>History</p>
             </IconButton> &nbsp; &nbsp;
-            <Button style={{color:"black", fontWeight:"bold"}}  
+            <Button className="LogoutBtn" style={{color:"black", fontWeight:"bold"}}  
              onClick={() => {
                 localStorage.removeItem("token")
                 navigate("/auth")
@@ -49,11 +49,12 @@ import { AuthContext } from '../contexts/AuthContext';
       <div className='meetContainer'>
         <div className="leftPanel">
             <div>
-                <h2>Providing Quality Video Call Just Like Quality Education</h2> &nbsp; &nbsp; 
+                <h2>Providing Quality Video Call</h2> &nbsp; &nbsp; 
 
                 <div style={{display:"flex", gap:"10px"}}>
 
-                <TextField onChange={(e) => setMeetingCode(e.target.value)} id="outlined-basic" label="Enter Meeting Code" variant="outlined" />
+                <TextField className="meetingCode"
+                onChange={(e) => setMeetingCode(e.target.value)} id="outlined-basic" label="Meeting Code" variant="outlined" />
                 <Button onClick={handleJoinVideoCall} variant="contained">Join</Button>
                 </div>
             </div>

@@ -14,6 +14,7 @@ import ChatIcon from '@mui/icons-material/Chat';
 import { io } from "socket.io-client";
 import { Badge } from "@mui/material";
 import CallEndIcon from '@mui/icons-material/CallEnd';
+import SendIcon from '@mui/icons-material/Send';
 import { useNavigate } from 'react-router-dom'
 import server from "../environment";
 
@@ -376,6 +377,7 @@ export default function VideoMeetComponent() {
         return Object.assign(stream.getVideoTracks()[0], { enabled: false })
     }
 
+
     let handleVideo = () => {
         setVideo(!video);
     }
@@ -450,8 +452,7 @@ export default function VideoMeetComponent() {
                     <h2>Enter into Lobby </h2> <br /> <br />
                     
                    <div className={styles.textBox}>
-                   <TextField  
-                   style={{width:"30vw", padding:"10px", margin:"10px"}}
+                   <TextField className={styles.username} 
                       id="outlined-basic" label="Username" 
                       value={username} 
                       onChange={e => setUsername(e.target.value)} 
@@ -474,7 +475,7 @@ export default function VideoMeetComponent() {
 
                    { showModal ?  <div className={styles.chatRoom}>
                         <div className={styles.chatContainer}>
-                            <h1>Chat</h1> <br /> 
+                            <h2>Chat</h2> <br /> 
 
                             <div className={styles.chattingDisplay}>
 
@@ -493,9 +494,13 @@ export default function VideoMeetComponent() {
                             </div>
                             <div className={styles.chattingArea}>
                         
-                            <TextField style={{width:"20vw"}} value={message} onChange={(e) => setMessage(e.target.value)}
+                           
+                           <TextField className={styles.chat} style={{width:"20vw"}} value={message} onChange={(e) => setMessage(e.target.value)}
                              id="outlined-basic" label="Chat" variant="outlined" />  &nbsp;
-                            <Button variant="contained" onClick={sendMessage}>send</Button>
+
+                               <SendIcon  className={styles.sendIcon}
+                              onClick = {sendMessage}></SendIcon>
+                           
                     
                             </div>
                         </div>
@@ -518,8 +523,8 @@ export default function VideoMeetComponent() {
                                 {screen === true ? <ScreenShareIcon /> : <StopScreenShareIcon />}
                             </IconButton> : <></>}
 
-                        <Badge badgeContent={newMessages} max={999} color='orange'>
-                            <IconButton onClick={ () => setModal(!showModal)} style={{ color: "white" }}>
+                        <Badge badgeContent={newMessages} max={999} color='orange'> 
+                            <IconButton onClick={() => setModal(!showModal)} style={{ color: "white" }}>
                                 <ChatIcon />                        </IconButton>
                         </Badge>
 

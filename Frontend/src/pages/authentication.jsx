@@ -16,6 +16,7 @@ import { Grid2, Snackbar } from '@mui/material';
 import { AuthContext } from '../contexts/AuthContext';
 import { PasswordRounded, Repeat } from '@mui/icons-material';
 import "../App.css";
+import { useNavigate } from 'react-router-dom';
 
 // TODO remove, this demo shouldn't need to reset the theme.
 
@@ -34,6 +35,8 @@ export default function Authentication() {
     const [open, setOpen] = React.useState(false);   //for implementing  snack bar
 
     const {handleRegister, handleLogin} = React.useContext(AuthContext);
+
+    const router = useNavigate();
 
     let handleAuth = async () => {
       try {
@@ -142,6 +145,8 @@ export default function Authentication() {
               > 
               {formState == 0 ? "Login" : "Register"}
               </Button>
+
+              <Button variant='text' onClick={() => {router("/")}}>Go Back</Button>
             </Box>
           </Box>
         </Grid>

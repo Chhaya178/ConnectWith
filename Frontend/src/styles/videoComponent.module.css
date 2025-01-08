@@ -123,6 +123,10 @@
 
 @media (min-width:350px) and (max-width:800px) {
 
+    .meetVideoContainer {
+        position: fixed;
+    }
+
     .textBox {
         margin-left: 5%;
     }
@@ -141,8 +145,8 @@
         margin-left: 20px;
     }
     .buttonContainers {
-        background-color: black; 
-        height: 10vh; 
+        height: 7vh; 
+        position: fixed;
     }
 
     .buttonContainers svg {
@@ -150,7 +154,7 @@
      }
 
      .chatRoom {
-        height: 90vh;
+        height: 85vh;
         padding-inline: 5px;
      }
 

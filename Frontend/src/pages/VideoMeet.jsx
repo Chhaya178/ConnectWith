@@ -123,12 +123,6 @@ export default function VideoMeetComponent() {
         }
     };
 
-    useEffect(() => {
-        if (video !== undefined && audio !== undefined) {
-            getUserMedia();
-        }
-    }, [video, audio])
-
 
     let getMedia = () => {
         setVideo(videoAvailable);
@@ -376,6 +370,12 @@ export default function VideoMeetComponent() {
         let stream = canvas.captureStream()
         return Object.assign(stream.getVideoTracks()[0], { enabled: false })
     }
+
+    useEffect(() => {
+        if (video !== undefined && audio !== undefined) {
+            getUserMedia();
+        }
+    }, [video, audio])
 
 
     let handleVideo = () => {
